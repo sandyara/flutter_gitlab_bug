@@ -4,12 +4,12 @@ import 'dart:io';
 import 'package:device_info/device_info.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttergitlabbug/model/issue.dart';
-import 'package:fluttergitlabbug/model/upload.dart';
-import 'package:fluttergitlabbug/service/api.dart';
-import 'package:fluttergitlabbug/widgets/button.dart';
-import 'package:fluttergitlabbug/widgets/edit_text.dart';
-import 'package:fluttergitlabbug/widgets/loading_widget.dart';
+import 'package:flutter_gitlab_bug/model/issue.dart';
+import 'package:flutter_gitlab_bug/model/upload.dart';
+import 'package:flutter_gitlab_bug/service/api.dart';
+import 'package:flutter_gitlab_bug/widgets/button.dart';
+import 'package:flutter_gitlab_bug/widgets/edit_text.dart';
+import 'package:flutter_gitlab_bug/widgets/loading_widget.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 import 'package:package_info/package_info.dart';
 

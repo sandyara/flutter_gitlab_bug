@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="759114ca-f74c-4361-b0a5-de2dc335e420" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fluttergitlabbug.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fluttergitlabbug.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/authentication.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/authentication.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/fluttergitlabbug.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/gitlab_bug.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/gitlab_issue_entry.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/gitlab_issue_entry.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/service/api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/service/api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/service/api_base.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/service/api_base.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fluttergitlabbug_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/fluttergitlabbug_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,25 +76,29 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1594621556632" />
-    <state width="1398" height="373" key="GridCell.Tab.0.bottom" timestamp="1594653568938">
+    <state width="1398" height="373" key="GridCell.Tab.0.bottom" timestamp="1594655746717">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="373" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594653568938" />
-    <state width="1398" height="373" key="GridCell.Tab.0.center" timestamp="1594653568937">
+    <state width="1398" height="373" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594655746717" />
+    <state width="1398" height="373" key="GridCell.Tab.0.center" timestamp="1594655746716">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="373" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1594653568937" />
-    <state width="1398" height="373" key="GridCell.Tab.0.left" timestamp="1594653568937">
+    <state width="1398" height="373" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1594655746716" />
+    <state width="1398" height="373" key="GridCell.Tab.0.left" timestamp="1594655746716">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="373" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1594653568937" />
-    <state width="1398" height="373" key="GridCell.Tab.0.right" timestamp="1594653568937">
+    <state width="1398" height="373" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1594655746716" />
+    <state width="1398" height="373" key="GridCell.Tab.0.right" timestamp="1594655746716">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="373" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1594653568937" />
+    <state width="1398" height="373" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1594655746716" />
     <state x="229" y="100" key="SettingsEditor" timestamp="1594646750521">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1594646750521" />
+    <state x="397" y="210" width="789" height="572" key="find.popup" timestamp="1594655785741">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="397" y="210" width="789" height="572" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1594655785741" />
   </component>
 </project>

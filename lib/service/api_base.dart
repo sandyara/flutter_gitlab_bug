@@ -1,9 +1,9 @@
 
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:fluttergitlabbug/model/api_error_response.dart';
-import 'package:fluttergitlabbug/model/api_exceptions.dart';
-import 'package:fluttergitlabbug/service/secure_storage.dart';
+import 'package:flutter_gitlab_bug/model/api_error_response.dart';
+import 'package:flutter_gitlab_bug/model/api_exceptions.dart';
+import 'package:flutter_gitlab_bug/service/secure_storage.dart';
 import 'package:http/http.dart';
 
 class ApiBase {

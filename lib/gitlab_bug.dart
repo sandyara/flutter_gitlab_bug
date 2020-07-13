@@ -5,10 +5,10 @@ import 'package:draggable_floating_button/draggable_floating_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:fluttergitlabbug/authentication.dart';
-import 'package:fluttergitlabbug/constant.dart';
-import 'package:fluttergitlabbug/gitlab_issue_entry.dart';
-import 'package:fluttergitlabbug/service/secure_storage.dart';
+import 'package:flutter_gitlab_bug/authentication.dart';
+import 'package:flutter_gitlab_bug/constant.dart';
+import 'package:flutter_gitlab_bug/gitlab_issue_entry.dart';
+import 'package:flutter_gitlab_bug/service/secure_storage.dart';
 import 'package:screenshot/screenshot.dart';
 
 class GitLabBug extends StatefulWidget {
@@ -77,7 +77,7 @@ class _GitLabBugState extends State<GitLabBug> {
               backgroundColor: Colors.white70,
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Image.asset(Images.gitlab, package: 'fluttergitlabbug',),
+                child: Image.asset(Images.gitlab, package: 'flutter_gitlab_bug',),
               ),
               onPressed: () => _onFabClick(context),
               appContext: context,

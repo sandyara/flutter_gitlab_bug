@@ -1,12 +1,12 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttergitlabbug/constant.dart';
-import 'package:fluttergitlabbug/model/auth_response.dart';
-import 'package:fluttergitlabbug/service/api.dart';
-import 'package:fluttergitlabbug/widgets/button.dart';
-import 'package:fluttergitlabbug/widgets/edit_text.dart';
-import 'package:fluttergitlabbug/widgets/loading_widget.dart';
+import 'package:flutter_gitlab_bug/constant.dart';
+import 'package:flutter_gitlab_bug/model/auth_response.dart';
+import 'package:flutter_gitlab_bug/service/api.dart';
+import 'package:flutter_gitlab_bug/widgets/button.dart';
+import 'package:flutter_gitlab_bug/widgets/edit_text.dart';
+import 'package:flutter_gitlab_bug/widgets/loading_widget.dart';
 
 class AuthenticationPage extends StatefulWidget {
   @override
@@ -78,7 +78,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
 
               Container(
                 alignment: Alignment.centerLeft,
-                child: Image.asset(Images.gitlab, package: 'fluttergitlabbug', width: 100, height: 100,),
+                child: Image.asset(Images.gitlab, package: 'flutter_gitlab_bug', width: 100, height: 100,),
               ),
 
               Padding(padding: EdgeInsets.only(top: 20)),

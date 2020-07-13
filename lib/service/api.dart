@@ -1,12 +1,12 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:fluttergitlabbug/model/auth_response.dart';
-import 'package:fluttergitlabbug/model/issue.dart';
-import 'package:fluttergitlabbug/model/upload.dart';
-import 'package:fluttergitlabbug/model/user.dart';
-import 'package:fluttergitlabbug/service/api_base.dart';
-import 'package:fluttergitlabbug/service/secure_storage.dart';
+import 'package:flutter_gitlab_bug/model/auth_response.dart';
+import 'package:flutter_gitlab_bug/model/issue.dart';
+import 'package:flutter_gitlab_bug/model/upload.dart';
+import 'package:flutter_gitlab_bug/model/user.dart';
+import 'package:flutter_gitlab_bug/service/api_base.dart';
+import 'package:flutter_gitlab_bug/service/secure_storage.dart';
 import 'package:http/http.dart';
 import 'package:path/path.dart';
 import 'package:async/async.dart' as dartAsync;

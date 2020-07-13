@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fluttergitlabbug/fluttergitlabbug.dart';
+import 'package:flutter_gitlab_bug/fluttergitlabbug.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('fluttergitlabbug');

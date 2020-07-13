@@ -104,6 +104,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_gitlab_bug:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "0.0.1"
   flutter_highlight:
     dependency: transitive
     description:
@@ -128,13 +135,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  fluttergitlabbug:
-    dependency: "direct main"
-    description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.0.1"
   highlight:
     dependency: transitive
     description:
