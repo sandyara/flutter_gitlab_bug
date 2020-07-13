@@ -3,7 +3,12 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttergitlabbug/model/issue.dart';
+import 'package:fluttergitlabbug/model/upload.dart';
+import 'package:fluttergitlabbug/service/api.dart';
+import 'package:fluttergitlabbug/widgets/button.dart';
 import 'package:fluttergitlabbug/widgets/edit_text.dart';
+import 'package:fluttergitlabbug/widgets/loading_widget.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 
 class GitLabIssueEntryPage extends StatefulWidget {
@@ -30,14 +35,16 @@ class _GitLabIssueEntryPageState extends State<GitLabIssueEntryPage> {
 
   bool _descriptionValidate = false;
 
-  String get markdownData {
-    return """
-      ![Issue Screenshot](${widget.file.path})
-      
-      ## ${_titleController.text}
-      
-      ${_descriptionController.text}
-    """;
+  bool _loading = false;
+
+  API _api = API();
+
+  String markdownData(String file) {
+    return """## ${_titleController.text}
+${_descriptionController.text}  
+
+
+${file}""";
   }
 
   _titleControllerListener(){
@@ -56,9 +63,47 @@ class _GitLabIssueEntryPageState extends State<GitLabIssueEntryPage> {
     _descriptionController..addListener(()=> _descriptionControllerListener());
   }
 
+  onSubmitIssue() async {
+
+    if (_titleController.text.isEmpty){
+      setState(() {
+        _titleValidate = true;
+      });
+      FocusScope.of(context).requestFocus(_titleFocus);
+      return;
+    }
+
+    if (_descriptionController.text.isEmpty) {
+      setState(() {
+        _descriptionValidate = true;
+      });
+      FocusScope.of(context).requestFocus(_descriptionFocus);
+      return;
+    }
+
+    setState(() { _loading = true; });
+    Upload uploadResponse = await _api.uploadFile(widget.file);
+    if (uploadResponse == null){
+      //TODO Add Popup for Alert
+      return;
+    }
+
+    IssueResponse issueResponse = await _api.createIssue(_titleController.text, markdownData(uploadResponse.markdown));
+    if (issueResponse == null){
+      //TODO Add Popup for Alert
+      return;
+    } else {
+      //TODO Add Popup for Alert
+    }
+
+    setState(() { _loading = false; });
+    Navigator.pop(context);
+    return;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return _loading ? LoadingWidget(message: "Creating Issue...",) :  Scaffold(
       appBar: AppBar(
         title: Text("Raise Issue", textScaleFactor: 1, style: TextStyle(color: Colors.black),),
         automaticallyImplyLeading: false,
@@ -70,12 +115,11 @@ class _GitLabIssueEntryPageState extends State<GitLabIssueEntryPage> {
           })
         ],
       ),
-     backgroundColor: Colors.white,
-     body: Padding(
+      backgroundColor: Colors.white,
+      body: Padding(
        padding: const EdgeInsets.all(10.0),
        child: ListView(
          children: <Widget>[
-
 
            EditText(
              "Title *",
@@ -119,22 +163,33 @@ class _GitLabIssueEntryPageState extends State<GitLabIssueEntryPage> {
              },
            ),
 
-           Container(
-             padding: const EdgeInsets.only(top: 25, bottom: 10),
-             alignment: Alignment.centerLeft,
-             child: Text("Preview", textScaleFactor: 1, style: TextStyle(fontSize: 18, color: Colors.black, fontWeight: FontWeight.bold),),
-           ),
+           Padding(padding: EdgeInsets.only(top: 20)),
 
-           Flexible(
-             child: Container(
-               height: 800,
-               child: MarkdownWidget(data: markdownData)
-             )
+           Stack(
+             children: <Widget>[
+
+               Image.file(widget.file,),
+
+               Positioned(
+                 right: 0,
+                 child: FloatingActionButton(
+                   backgroundColor: Color(0xffE24329),
+                   mini: true,
+                   onPressed: (){
+
+                   },
+                   child: Icon(Icons.edit, color: Colors.white,),
+                 ),
+               ),
+
+
+             ],
            )
 
          ],
        ),
      ),
+      bottomNavigationBar: Button("Submit Issue", key: Key('btnSubmit'), onPressed: ()=> onSubmitIssue()),
     );
   }
 }

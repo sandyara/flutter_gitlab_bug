@@ -5,34 +5,70 @@ import 'package:draggable_floating_button/draggable_floating_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fluttergitlabbug/authentication.dart';
 import 'package:fluttergitlabbug/constant.dart';
 import 'package:fluttergitlabbug/gitlab_issue_entry.dart';
+import 'package:fluttergitlabbug/service/secure_storage.dart';
 import 'package:screenshot/screenshot.dart';
 
+class GitLabBug extends StatefulWidget {
 
-class GitLabBug extends StatelessWidget {
+  final Widget child;
+  final String customDomain;
+  final int projectId;
 
-  Widget child;
+  GitLabBug({@required this.child, @required this.projectId, this.customDomain});
 
-  GitLabBug({this.child});
+  @override
+  _GitLabBugState createState() => _GitLabBugState();
+}
 
+class _GitLabBugState extends State<GitLabBug> {
+  final GlobalKey _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  SecureStorage _secureStorage = new SecureStorage();
   ScreenshotController _screenshotController = ScreenshotController();
 
   _onFabClick(BuildContext context) async {
     File capturedImage = await _screenshotController.capture();
 
-    Navigator.push(context, MaterialPageRoute(builder: (context) => GitLabIssueEntryPage(file: capturedImage,)));
-    print(capturedImage.path);
+    String accessToken = await _secureStorage.getAccessToken();
+
+    var authResponse;
+    if (accessToken == ""){
+      authResponse = await Navigator.push(context, MaterialPageRoute(builder: (context) => AuthenticationPage()));
+    } else {
+      authResponse = true;
+    }
+
+    if (authResponse != null && authResponse == true){
+      Navigator.push(context, MaterialPageRoute(builder: (context) => GitLabIssueEntryPage(file: capturedImage,)));
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    initAsync();
+  }
+
+  initAsync() async {
+    await _secureStorage.setGitLabConfig(
+        widget.customDomain == null ? "https://gitlab.com" : widget.customDomain,
+        widget.projectId.toString()
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       body: Stack(children: <Widget>[
 
         Screenshot(
           controller: _screenshotController,
-          child: child
+          child: widget.child
         ),
 
         DraggableFloatingActionButton(
@@ -52,5 +88,4 @@ class GitLabBug extends StatelessWidget {
       ),
     );
   }
-
 }

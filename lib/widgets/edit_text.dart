@@ -44,6 +44,26 @@ class EditText extends StatefulWidget {
       this.textInputAction = TextInputAction.next,
       this.validate});
 
+
+  EditText.password(this.hint, this.key, this.controller, this.inputType,
+      {this.marginEdgeInsets,
+        this.focusNode,
+        this.onSubmitted,
+        this.onChanged,
+        this.maxLength,
+        this.enabled = true,
+        this.restrictSpace = true,
+        this.autofocus = false,
+        this.textCapitalization,
+        this.errorText,
+        this.maxLine = 1,
+        this.textAlign = TextAlign.left,
+        this.textInputAction = TextInputAction.next,
+        this.validate}) {
+    isPasswordField = true;
+  }
+
+
   @override
   _EditTextState createState() => _EditTextState();
 }

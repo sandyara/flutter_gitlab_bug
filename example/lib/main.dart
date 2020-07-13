@@ -46,9 +46,12 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return  MaterialApp(
         home: GitLabBug(
+          customDomain: "https://gitlab.vgts.tech",
+          projectId: 67,
           child: Scaffold(
             appBar: AppBar(
               title: const Text('Plugin example app'),
+              backgroundColor: Color(0xffE24329),
             ),
             body: Center(
               child: Text('Running on: $_platformVersion\n'),

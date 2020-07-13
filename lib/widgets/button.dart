@@ -12,7 +12,7 @@ class Button extends StatelessWidget {
   Button(this.text,
       {@required this.key,
       this.width = 160,
-      this.height = 45,
+      this.height = 50,
       @required this.onPressed,
       this.borderRadius,
       this.disabled = false});
@@ -23,7 +23,7 @@ class Button extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-          color: disabled ? Theme.of(context).primaryColor.withOpacity(0.4) : Theme.of(context).primaryColor,
+          color: disabled ? Color(0xffE24329).withOpacity(0.4) : Color(0xffE24329),
           borderRadius: borderRadius,
         ),
       alignment: Alignment.center,
@@ -36,7 +36,7 @@ class Button extends StatelessWidget {
           child: Text(
             text,
             textScaleFactor: 1,
-            style: Theme.of(context).textTheme.button,
+            style: TextStyle(color: Colors.white, fontSize: 16),
             maxLines: 1,
             overflow: TextOverflow.fade,
           ),
