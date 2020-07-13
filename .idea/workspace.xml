@@ -1,22 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="759114ca-f74c-4361-b0a5-de2dc335e420" name="Default Changelist" comment="" />
+    <list default="true" id="759114ca-f74c-4361-b0a5-de2dc335e420" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/gitlab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/constant.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/gitlab_issue_entry.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widgets/button.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widgets/edit_text.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/fluttergitlabbug.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/fluttergitlabbug.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ecMa7PEFvwjxqESTjAqmzircGB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/widgets" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images" />
+      <recent name="$PROJECT_DIR$/assets/images/images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/widgets" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -30,5 +69,27 @@
       <updated>1594616487205</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1594621556632">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1594621556632" />
+    <state width="1398" height="373" key="GridCell.Tab.0.bottom" timestamp="1594622313075">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="373" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594622313075" />
+    <state width="1398" height="373" key="GridCell.Tab.0.center" timestamp="1594622313074">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="373" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1594622313074" />
+    <state width="1398" height="373" key="GridCell.Tab.0.left" timestamp="1594622313074">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="373" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1594622313074" />
+    <state width="1398" height="373" key="GridCell.Tab.0.right" timestamp="1594622313075">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="373" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1594622313075" />
   </component>
 </project>
