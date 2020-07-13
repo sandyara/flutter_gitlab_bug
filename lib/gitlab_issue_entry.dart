@@ -1,6 +1,7 @@
 
 import 'dart:io';
 
+import 'package:device_info/device_info.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttergitlabbug/model/issue.dart';
@@ -10,6 +11,7 @@ import 'package:fluttergitlabbug/widgets/button.dart';
 import 'package:fluttergitlabbug/widgets/edit_text.dart';
 import 'package:fluttergitlabbug/widgets/loading_widget.dart';
 import 'package:markdown_widget/markdown_widget.dart';
+import 'package:package_info/package_info.dart';
 
 class GitLabIssueEntryPage extends StatefulWidget {
 
@@ -37,13 +39,23 @@ class _GitLabIssueEntryPageState extends State<GitLabIssueEntryPage> {
 
   bool _loading = false;
 
+  PackageInfo packageInfo;
+
+  String modelName = "";
+
   API _api = API();
 
   String markdownData(String file) {
-    return """## ${_titleController.text}
+    return """## Description
 ${_descriptionController.text}  
 
+## App Info
+Platform: ${Platform.isIOS ? "iOS" : Platform.isAndroid ? "Android" : "Other"}  
+Device Name: ${modelName}  
+App Version: v${packageInfo.version}+${packageInfo.buildNumber}  
+Package Name: ${packageInfo.packageName}  
 
+## Screenshot
 ${file}""";
   }
 
@@ -59,12 +71,20 @@ ${file}""";
   void initState() {
     super.initState();
 
+    initAsync();
+
     _titleController..addListener(()=> _titleControllerListener());
     _descriptionController..addListener(()=> _descriptionControllerListener());
   }
 
-  onSubmitIssue() async {
+  initAsync() async {
+    packageInfo = await PackageInfo.fromPlatform();
 
+    DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
+    modelName = Platform.isIOS ? (await deviceInfo.iosInfo).utsname.machine : (await deviceInfo.androidInfo).model;
+  }
+
+  onSubmitIssue() async {
     if (_titleController.text.isEmpty){
       setState(() {
         _titleValidate = true;

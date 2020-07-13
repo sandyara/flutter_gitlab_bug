@@ -60,6 +60,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         elevation: 0,
+        backgroundColor: Colors.white,
         actions: <Widget>[
           IconButton(icon: Icon(Icons.close), onPressed: (){
             Navigator.pop(context);
